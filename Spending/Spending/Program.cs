@@ -6,7 +6,7 @@ namespace Spending
     {
         static void Main(string[] args)
         {
-            Console.Write("What is your annual income?(without'$') ");
+            Console.Write("Your annual income, minus tax (Only numbers and decimals): ");
 
             bool _ = double.TryParse(Console.ReadLine(), out var totalincome);
 
@@ -14,14 +14,12 @@ namespace Spending
                 {
                 Run();
                 Console.WriteLine("To exit, Type X and then Enter");
-                Console.Write("What is your total income: ");
+                Console.Write("Your annual income, minus tax (Only numbers and decimals): ");
 
                 _ = double.TryParse(Console.ReadLine(), out totalincome);
             }
             void Run()
             {
-               
-
                 string[,] Operations = new string[7, 3]
                 {
             { "Housing:             ", "0.2", "          As little as possible, 25% max" },
